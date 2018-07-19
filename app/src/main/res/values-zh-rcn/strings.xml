@@ -1,0 +1,12 @@
+<resources>
+	<string name="about">关于</string>
+  <string name="app">视频动态壁纸</string>
+	<string name="apply">应用</string>
+	<string name="contact">联系开发者</string>
+	<string name="email">Cyunrei@gmail.com</string>
+	<string name="path">添加文件路径</string>
+	<string name="select">选择视频文件</string>
+	<string name="settings">设置</string>
+	<string name="version">版本</string>
+	<string name="versions">0.1.1.1_180719_Nano</string>
+</resources>
