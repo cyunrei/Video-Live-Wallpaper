@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="@string/settings">
+		<EditTextPreference 
+			android:key="path"
+			android:title="@string/select"  
+			android:summary="@string/path"/>
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/about">
+		<Preference
+			android:title="@string/contact"
+			android:summary="@string/email"/>
+		<Preference
+			android:title="@string/version"
+			android:summary="@string/versions"/>
+	</PreferenceCategory>
+</PreferenceScreen>
