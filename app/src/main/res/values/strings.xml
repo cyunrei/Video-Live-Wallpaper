@@ -1,0 +1,12 @@
+<resources>
+	<string name="about">About</string>
+  <string name="app">VideoLiveWallpaper <small>Nano</small></string>
+	<string name="apply">Apply</string>
+	<string name="contact">Contact Developer</string>
+	<string name="email">Cyunrei@gmail.com</string>
+	<string name="path">Add Video File Path</string>
+	<string name="select">Select Video</string>
+	<string name="settings">Settings</string>
+	<string name="version">Version</string>
+	<string name="versions">0.1.1.1_180719_Nano</string>
+</resources>
