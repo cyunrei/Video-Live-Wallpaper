@@ -34,19 +34,11 @@ public class VideoLiveWallpaper extends WallpaperService
 	{
 
         private MediaPlayer mMediaPlayer;
-        private BroadcastReceiver mVideoParamsControlReceiver;
 
         @Override
         public void onCreate(SurfaceHolder surfaceHolder)
 		{
             super.onCreate(surfaceHolder);
-        }
-
-        @Override
-        public void onDestroy()
-		{
-            unregisterReceiver(mVideoParamsControlReceiver);
-            super.onDestroy();
         }
 
         @Override
@@ -61,8 +53,7 @@ public class VideoLiveWallpaper extends WallpaperService
                 mMediaPlayer.pause();
             }
         }
-
-
+		
         @Override
         public void onSurfaceCreated(SurfaceHolder holder)
 		{
