@@ -1,1 +1,2 @@
-<wallpaper xmlns:android="http://schemas.android.com/apk/res/android"/>
+<wallpaper xmlns:android="http://schemas.android.com/apk/res/android"
+	android:settingsActivity="com.cyunrei.videolivewallpaper.MainActivity"/>
