@@ -7,9 +7,9 @@ android {
     defaultConfig {
         applicationId "com.cyunrei.videolivewallpaper"
         minSdkVersion 1
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
-        versionName "0.1.1.1_180719_Nano"
+        versionName "0.1.1.1_190211_Nano"
     }
     buildTypes {
         release {
