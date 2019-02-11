@@ -64,7 +64,7 @@ public class VideoLiveWallpaper extends WallpaperService
 
             try
 			{
-				mMediaPlayer.setDataSource("/sdcard/android/data/com.cyunrei.videolivewallpaper/files/file.mp4");
+				mMediaPlayer.setDataSource("/data/data/com.cyunrei.videolivewallpaper/file.mp4");
                 mMediaPlayer.setLooping(true);
 				mMediaPlayer.setVolume(0, 0);
                 mMediaPlayer.prepare();
