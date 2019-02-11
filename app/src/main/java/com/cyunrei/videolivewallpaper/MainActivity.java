@@ -27,13 +27,6 @@ public class MainActivity extends PreferenceActivity
 		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
 			ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
 
-		try
-		{
-			Runtime.getRuntime().exec("mkdir -p /storage/emulated/0/Android/data/com.cyunrei.videolivewallpaper/files/");
-		}
-		catch (IOException e)
-		{}
-
     }
 
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -62,7 +55,7 @@ public class MainActivity extends PreferenceActivity
 
 		try
 		{
-			Runtime.getRuntime().exec("cp " + path + " ../storage/emulated/0/Android/data/com.cyunrei.videolivewallpaper/files/file.mp4");
+			Runtime.getRuntime().exec("cp " + path + " ../data/data/com.cyunrei.videolivewallpaper/file.mp4");
 		}
 		catch (IOException e)
 		{}
