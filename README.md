@@ -1,5 +1,5 @@
 # Video Live Wallpaper
-## Application Infomation
+## Application Information
 Application name:Video Live Wallpaper
 <br/>Package name:com.cyunrei.videolivewallpaper
 <br/>Platform:Android
