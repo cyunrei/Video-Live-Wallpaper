@@ -5,7 +5,7 @@ Application name:Video Live Wallpaper
 <br/>Platform:Android
 <br/>Support Android version:All
 <br/>Language:English/简体中文
-<br/>Version:0.1.2.1_190303-nano
+<br/>Version:0.1.2.1_190303_nano
 ## Update Log
 Add boot auto-start(2018-07-19)
 <br/>Optimize package size(2018-07-19)
@@ -20,5 +20,5 @@ Add boot auto-start(2018-07-19)
 ## Application Preview
 ![](https://github.com/Cyunrei/Video-Live-Wallpaper/blob/master/preview.gif)
 ## PS
-[App Release Page](https://github.com/Cyunrei/Video-Live-Wallpaper/releases/)
-<br/>This app just adapt to the **Android Original System**
+This app just adapt to the **Android Original System**
+<br/>[App Release Page](https://github.com/Cyunrei/Video-Live-Wallpaper/releases/)
