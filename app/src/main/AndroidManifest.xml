@@ -2,7 +2,7 @@
     package="com.cyunrei.videolivewallpaper" >
 	
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
- 
+
     <application
         android:label="@string/app"
         android:theme="@android:style/Theme.Material.Light" >
@@ -11,6 +11,7 @@
             android:label="@string/app" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 		
@@ -32,7 +33,6 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-		
     </application>
 
 </manifest>
