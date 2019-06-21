@@ -23,18 +23,14 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
-		getPermissipn();
+		getPermission();
 
 		
 		SharedPreferences updateReader = getSharedPreferences("dialog", MODE_PRIVATE);
 
 		String Updatealue = updateReader.getString("update", "");
 
-		if (Updatealue.equals("1"))
-		{
-		}
-		else
-		{
+		if (!Updatealue.equals("1")) {
 			updateDialog();
 		}
 
@@ -180,7 +176,7 @@ public class MainActivity extends Activity
 		VideoLiveWallpaper.setToWallPaper(this);
 	}
 
-	private void getPermissipn()
+	private void getPermission()
 	{
 
 		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
