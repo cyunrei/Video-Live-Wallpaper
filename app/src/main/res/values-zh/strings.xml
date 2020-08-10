@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">关于</string>
+    <string name="add_path">添加文件路径</string>
+    <string name="app_name">视频动态壁纸</string>
+    <string name="apply">应用</string>
+    <string name="choose_video_file">选择视频文件</string>
+    <string name="add_video_file_path">添加视频文件路径</string>
+    <string name="cancel">取消</string>
+    <string name="ok">好的</string>
+    <string name="path">视频文件路径</string>
+    <string name="update_log">更新日志</string>
+    <string name="update_log_context">
+        \n修复多次设置壁纸导致视频暂停问题(2020-08-10)
+		\n修复在Android 10上设置壁纸导致的黑屏问题(2020-08-10)
+        \n修复在Android 10上选择视频后应用崩溃问题(2020-08-10)
+        \n增加对Android 10+的支持(2020-08-10)
+        \n增加视频壁纸音乐(开启/关闭)功能(2020-08-10)
+        \n增加隐藏桌面图标功能(2020-08-10)</string>
+    <string name="wallpaper_settings">壁纸设置</string>
+    <string name="applications_settings">应用设置</string>
+    <string name="settings">设置</string>
+    <string name="play_video_with_sound">开启壁纸音乐</string>
+    <string name="hide_icon_from_launcher">隐藏应用图标</string>
+    <string name="hide">隐藏</string>
+    <string name="show">显示</string>
+    <string name="enable">启用</string>
+    <string name="disable">禁用</string>
+    <string name="version">版本</string>
+</resources>

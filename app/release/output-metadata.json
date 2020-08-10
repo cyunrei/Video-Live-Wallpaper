@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.cyunrei.videolivewallpaper",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 2,
+      "versionName": "0.1.4.3_200810_nano",
+      "enabled": true,
+      "outputFile": "app-release.apk"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.0"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
 
     defaultConfig {
         applicationId "com.cyunrei.videolivewallpaper"
-        minSdkVersion 1
-        targetSdkVersion 28
-        versionCode 1
-        versionName "0.1.3.1_190303_nano"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 2
+        versionName "0.1.4.3_200810_nano"
     }
     buildTypes {
         release {
@@ -20,5 +20,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+
 }
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/wallpaper_settings">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="play_video_with_sound"
+            android:title="@string/play_video_with_sound"
+            android:summaryOff="@string/disable"
+            android:summaryOn="@string/enable"/>/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/applications_settings">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="hide_icon_from_launcher"
+        android:title="@string/hide_icon_from_launcher"
+        android:summaryOff="@string/show"
+        android:summaryOn="@string/hide"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/about">
+        <Preference
+            android:title="@string/version"
+            android:summary="@string/version_name"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
