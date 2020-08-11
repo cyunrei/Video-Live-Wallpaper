@@ -9,7 +9,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 2
-        versionName "0.1.4.3_200810_nano"
+        versionName "0.1.4.4_200811_nano"
     }
     buildTypes {
         release {
