@@ -9,7 +9,7 @@ Package name: com.cyunrei.videolivewallpaper
 Platform: Android  
 Support Android version: 5.0+  
 Language: English/简体中文  
-Version: 0.1.4.3_200811_nano
+Version: 0.1.4.4_200811_nano
 ## Update Log
 ### Changes
 - Support Android 10+ 
