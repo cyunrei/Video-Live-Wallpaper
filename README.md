@@ -9,7 +9,7 @@ Package name: com.cyunrei.videolivewallpaper
 Platform: Android  
 Support Android version: 5.0+  
 Language: English/简体中文  
-Version: 0.1.4.3_200810_nano
+Version: 0.1.4.3_200811_nano
 ## Update Log
 ### Changes
 - Support Android 10+ 
@@ -19,6 +19,6 @@ Version: 0.1.4.3_200810_nano
 - Set wallpaper multiple times case video stop
 - Crash after selected video on Android 10
 - Black screen after set wallpaper on Android 10
-- Fix crash after selected video below Android 8.0 devices issuecd
+- Fix crash after selected video below Android 8.0
 ## Application Preview
 ![](https://github.com/Cyunrei/Video-Live-Wallpaper/blob/master/preview.gif)
