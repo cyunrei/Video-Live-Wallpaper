@@ -14,6 +14,7 @@
         \nFix set wallpaper multiple times case video stop issue(2020-08-10)
 		\nFix black screen after set wallpaper on Android 10 devices issue(2020-08-10)
         \nFix crash after selected video on Android 10 devices issue(2020-08-10)
+        \nFix crash after selected video below Android 8.0 devices issue(2020-08-11)
         \nSupport Android 10+(2020-08-10)
         \nAdd video wallpaper music (on/off) options(2020-08-10)
         \nAdd hide application icon options(2020-08-10)</string>
@@ -27,7 +28,7 @@
     <string name="enable">Enable</string>
     <string name="disable">Disable</string>
     <string name="version">Version</string>
-    <string name="version_name" translatable="false">0.1.4.3_200810_nano</string>
+    <string name="version_name" translatable="false">0.1.4.4_200811_nano</string>
     <!--preference-->
     <string name="preference_play_video_with_sound" translatable="false">play_video_with_sound</string>
     <string name="preference_hide_icon_from_launcher" translatable="false">hide_icon_from_launcher</string>
