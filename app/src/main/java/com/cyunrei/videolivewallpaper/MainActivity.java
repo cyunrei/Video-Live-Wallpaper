@@ -90,13 +90,11 @@ public class MainActivity extends Activity {
         });
     }
 
-    @TargetApi(Build.VERSION_CODES.DONUT)
     private void getPermission() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
 
-    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     private void updateDialog() {
         final AlertDialog.Builder normalDialog = new AlertDialog.Builder(MainActivity.this);
         normalDialog.setTitle(getString(R.string.update_log) + "(" + getString(R.string.version_name) + ")");
@@ -119,18 +117,17 @@ public class MainActivity extends Activity {
         startActivityForResult(intent, 1);
     }
 
-    @TargetApi(Build.VERSION_CODES.O)
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
             Uri uri = data.getData();
             assert uri != null;
             if ("file".equalsIgnoreCase(uri.getScheme())) {
-                copyFile(new File(Objects.requireNonNull(uri.getPath())), new File(getFilesDir().toPath() + "/file.mp4"));
+                copyFile(new File(Objects.requireNonNull(uri.getPath())), new File(getFilesDir() + "/file.mp4"));
                 VideoLiveWallpaper.setToWallPaper(this);
                 return;
             }
-            copyFile(new File(getPath(this, uri)), new File(getFilesDir().toPath() + "/file.mp4"));
+            copyFile(new File(getPath(this, uri)), new File(getFilesDir() + "/file.mp4"));
             VideoLiveWallpaper.setToWallPaper(this);
         }
 
