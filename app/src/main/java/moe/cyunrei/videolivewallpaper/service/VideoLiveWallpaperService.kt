@@ -12,8 +12,13 @@ class VideoLiveWallpaperService : WallpaperService() {
     internal inner class VideoEngine : Engine() {
         private var mediaPlayer: MediaPlayer? = null
         private var broadcastReceiver: BroadcastReceiver? = null
+        private var videoFilePath: String? = null
+
         override fun onCreate(surfaceHolder: SurfaceHolder) {
             super.onCreate(surfaceHolder)
+            videoFilePath =
+                this@VideoLiveWallpaperService.openFileInput("video_live_wallpaper_file_path")
+                    .bufferedReader().readText()
             val intentFilter = IntentFilter(VIDEO_PARAMS_CONTROL_ACTION)
             registerReceiver(object : BroadcastReceiver() {
                 override fun onReceive(context: Context, intent: Intent) {
@@ -29,15 +34,15 @@ class VideoLiveWallpaperService : WallpaperService() {
 
         override fun onSurfaceCreated(holder: SurfaceHolder) {
             super.onSurfaceCreated(holder)
-            mediaPlayer = MediaPlayer()
-            mediaPlayer!!.setSurface(holder.surface)
+            mediaPlayer = MediaPlayer().apply {
+                setSurface(holder.surface)
+                setDataSource(videoFilePath)
+                isLooping = true
+                setVideoScalingMode(MediaPlayer.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING)
+                prepare()
+                start()
+            }
             try {
-                mediaPlayer!!.reset()
-                mediaPlayer!!.setDataSource("$filesDir/file.mp4")
-                mediaPlayer!!.isLooping = true
-                mediaPlayer!!.setVideoScalingMode(MediaPlayer.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING)
-                mediaPlayer!!.prepare()
-                mediaPlayer!!.start()
                 val file = File("$filesDir/unmute")
                 if (file.exists()) mediaPlayer!!.setVolume(1.0f, 1.0f) else mediaPlayer!!.setVolume(
                     0f,
@@ -59,13 +64,14 @@ class VideoLiveWallpaperService : WallpaperService() {
         override fun onSurfaceDestroyed(holder: SurfaceHolder) {
             super.onSurfaceDestroyed(holder)
             if (mediaPlayer!!.isPlaying) mediaPlayer!!.stop()
-            mediaPlayer!!.release()
+            mediaPlayer?.release()
             mediaPlayer = null
         }
 
         override fun onDestroy() {
             super.onDestroy()
-            if (mediaPlayer != null) mediaPlayer!!.release()
+            mediaPlayer?.release()
+            mediaPlayer = null
             unregisterReceiver(broadcastReceiver)
         }
     }
@@ -76,28 +82,32 @@ class VideoLiveWallpaperService : WallpaperService() {
 
     companion object {
         const val VIDEO_PARAMS_CONTROL_ACTION = "moe.cyunrei.livewallpaper"
-        const val KEY_ACTION = "music"
+        private const val KEY_ACTION = "music"
         private const val ACTION_MUSIC_UNMUTE = false
         private const val ACTION_MUSIC_MUTE = true
         fun muteMusic(context: Context) {
-            val intent = Intent(VIDEO_PARAMS_CONTROL_ACTION)
-            intent.putExtra(KEY_ACTION, ACTION_MUSIC_MUTE)
-            context.sendBroadcast(intent)
+            Intent(VIDEO_PARAMS_CONTROL_ACTION).apply {
+                putExtra(KEY_ACTION, ACTION_MUSIC_MUTE)
+            }.also { context.sendBroadcast(it) }
         }
 
         fun unmuteMusic(context: Context) {
-            val intent = Intent(VIDEO_PARAMS_CONTROL_ACTION)
-            intent.putExtra(KEY_ACTION, ACTION_MUSIC_UNMUTE)
-            context.sendBroadcast(intent)
+            Intent(VIDEO_PARAMS_CONTROL_ACTION).apply {
+                putExtra(KEY_ACTION, ACTION_MUSIC_UNMUTE)
+            }.also {
+                context.sendBroadcast(it)
+            }
         }
 
         fun setToWallPaper(context: Context) {
-            val intent = Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER)
-            intent.putExtra(
-                WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
-                ComponentName(context, VideoLiveWallpaperService::class.java)
-            )
-            context.startActivity(intent)
+            Intent(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER).apply {
+                putExtra(
+                    WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
+                    ComponentName(context, VideoLiveWallpaperService::class.java)
+                )
+            }.also {
+                context.startActivity(it)
+            }
             try {
                 WallpaperManager.getInstance(context).clear()
             } catch (e: IOException) {
