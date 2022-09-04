@@ -7,17 +7,6 @@
     <string name="choose_video_file">Choose Video File</string>
     <string name="add_video_file_path">Add Video File Path</string>
     <string name="cancel">Cancel</string>
-    <string name="ok">OK</string>
-    <string name="path">Video File Path</string>
-    <string name="update_log">Update Log</string>
-    <string name="update_log_context">
-        \nFix set wallpaper multiple times case video stop issue(2020-08-10)
-		\nFix black screen after set wallpaper on Android 10 devices issue(2020-08-10)
-        \nFix crash after selected video on Android 10 devices issue(2020-08-10)
-        \nFix crash after selected video below Android 8.0 devices issue(2020-08-11)
-        \nSupport Android 10+(2020-08-10)
-        \nAdd video wallpaper music (on/off) options(2020-08-10)
-        \nAdd hide application icon options(2020-08-10)</string>
     <string name="wallpaper_settings">Wallpaper settings</string>
     <string name="applications_settings">Application settings</string>
     <string name="settings">Settings</string>
@@ -32,5 +21,4 @@
     <!--preference-->
     <string name="preference_play_video_with_sound" translatable="false">play_video_with_sound</string>
     <string name="preference_hide_icon_from_launcher" translatable="false">hide_icon_from_launcher</string>
-    <string name="preference_version_name" translatable="false">version_name</string>
 </resources>

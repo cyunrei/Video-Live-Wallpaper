@@ -3,9 +3,7 @@ package moe.cyunrei.videolivewallpaper.activity
 import android.Manifest
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
@@ -24,20 +22,11 @@ import java.util.*
 
 class MainActivity : Activity() {
 
-    companion object {
-        private const val PREFERENCES = "moe.cyunrei.videolivewallpaper_preferences"
-    }
-
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         permissionCheck
-        val updateReader: SharedPreferences =
-            getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
-        val versionName: String = updateReader.getString(getString(R.string.version_name), " ")!!
-        if (versionName != getString(R.string.version_name)) updateDialog()
-
         findViewById<Button?>(R.id.choose_video_file).apply {
             setOnClickListener { chooseVideo() }
         }
@@ -90,20 +79,6 @@ class MainActivity : Activity() {
                 )
             }
         }
-
-    private fun updateDialog() {
-        val normalDialog: AlertDialog.Builder = AlertDialog.Builder(this@MainActivity)
-        normalDialog.setTitle(getString(R.string.update_log) + "(" + getString(R.string.version_name) + ")")
-        normalDialog.setMessage(getString(R.string.update_log_context))
-        normalDialog.setPositiveButton(
-            getString(R.string.ok)
-        ) { _, _ -> }
-        val editor: SharedPreferences.Editor =
-            getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).edit()
-        editor.putString(getString(R.string.version_name), getString(R.string.version_name))
-        editor.apply()
-        normalDialog.show()
-    }
 
     private fun chooseVideo() {
         val intent = Intent()

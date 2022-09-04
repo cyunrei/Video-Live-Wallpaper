@@ -7,17 +7,6 @@
     <string name="choose_video_file">选择视频文件</string>
     <string name="add_video_file_path">添加视频文件路径</string>
     <string name="cancel">取消</string>
-    <string name="ok">好的</string>
-    <string name="path">视频文件路径</string>
-    <string name="update_log">更新日志</string>
-    <string name="update_log_context">
-        \n修复多次设置壁纸导致视频暂停问题(2020-08-10)
-		\n修复在Android 10设备上设置壁纸导致的黑屏问题(2020-08-10)
-        \n修复在Android 10设备上选择视频后应用崩溃问题(2020-08-10)
-        \n修复在Android 8.0设备以下选择视频后应用崩溃问题(2020-08-11)
-        \n增加对Android 10+的支持(2020-08-10)
-        \n增加视频壁纸音乐(开启/关闭)功能(2020-08-10)
-        \n增加隐藏桌面图标功能(2020-08-10)</string>
     <string name="wallpaper_settings">壁纸设置</string>
     <string name="applications_settings">应用设置</string>
     <string name="settings">设置</string>

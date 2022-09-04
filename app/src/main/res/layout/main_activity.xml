@@ -34,14 +34,5 @@
         android:text="@string/settings"
         android:textAllCaps="false" />
 
-<!--    <Button-->
-<!--        android:id="@+id/about"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="5dp"-->
-<!--        android:layout_marginBottom="5dp"-->
-<!--        android:text="@string/about"-->
-<!--        android:textAllCaps="false" />-->
-
 </LinearLayout>
 
