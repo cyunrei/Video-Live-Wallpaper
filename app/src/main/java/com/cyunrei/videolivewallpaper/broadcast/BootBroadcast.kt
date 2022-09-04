@@ -1,19 +1,13 @@
-package com.cyunrei.videolivewallpaper;
+package com.cyunrei.videolivewallpaper.broadcast
 
-import android.annotation.SuppressLint;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import com.cyunrei.videolivewallpaper.service.VideoLiveWallpaperService
 
-class BootBroadCast extends BroadcastReceiver
-{
-	@SuppressLint("UnsafeProtectedBroadcastReceiver")
-	@Override
-	public void onReceive(Context context, Intent intent)
-	{
-		Intent service = new Intent(context, VideoLiveWallpaper.class);
-		context.startService(service);
-	}
-
+internal class BootBroadCast : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent) {
+        val service = Intent(context, VideoLiveWallpaperService::class.java)
+        context.startService(service)
+    }
 }
-
