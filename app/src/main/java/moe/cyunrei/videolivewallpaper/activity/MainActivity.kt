@@ -1,4 +1,4 @@
-package com.cyunrei.videolivewallpaper.activity
+package moe.cyunrei.videolivewallpaper.activity
 
 import android.Manifest
 import android.app.Activity
@@ -15,17 +15,17 @@ import android.widget.EditText
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.cyunrei.videolivewallpaper.R
-import com.cyunrei.videolivewallpaper.service.VideoLiveWallpaperService
-import com.cyunrei.videolivewallpaper.utils.DocumentUtils.getPath
-import com.cyunrei.videolivewallpaper.utils.FileUtils.copyFile
+import moe.cyunrei.videolivewallpaper.R
+import moe.cyunrei.videolivewallpaper.service.VideoLiveWallpaperService
+import moe.cyunrei.videolivewallpaper.utils.DocumentUtils.getPath
+import moe.cyunrei.videolivewallpaper.utils.FileUtils.copyFile
 import java.io.File
 import java.util.*
 
 class MainActivity : Activity() {
 
     companion object {
-        private const val PREFERENCES = "com.cyunrei.videolivewallpaper_preferences"
+        private const val PREFERENCES = "moe.cyunrei.videolivewallpaper_preferences"
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

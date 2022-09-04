@@ -1,4 +1,4 @@
-package com.cyunrei.videolivewallpaper.service
+package moe.cyunrei.videolivewallpaper.service
 
 import android.app.WallpaperManager
 import android.content.*
@@ -75,7 +75,7 @@ class VideoLiveWallpaperService : WallpaperService() {
     }
 
     companion object {
-        const val VIDEO_PARAMS_CONTROL_ACTION = "com.cyunrei.livewallpaper"
+        const val VIDEO_PARAMS_CONTROL_ACTION = "moe.cyunrei.livewallpaper"
         const val KEY_ACTION = "music"
         private const val ACTION_MUSIC_UNMUTE = false
         private const val ACTION_MUSIC_MUTE = true
