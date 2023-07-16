@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Giới thiệu</string>
+    <string name="add_path">Thêm Đường Dẫn</string>
+    <string name="app_name">VideoLiveWallpaper</string>
+    <string name="apply">Áp Dụng</string>
+    <string name="choose_video_file">Chọn Video</string>
+    <string name="add_video_file_path">Thêm Đường Dẫn Video</string>
+    <string name="cancel">Hủy Bỏ</string>
+    <string name="wallpaper_settings">Cài đặt hình nền</string>
+    <string name="applications_settings">Cài đặt</string>
+    <string name="settings">Cài Đặt</string>
+    <string name="play_video_with_sound">Phát video kèm âm thanh</string>
+    <string name="hide_icon_from_launcher">Ẩn biểu tượng khỏi launcher</string>
+    <string name="hide">ẨN</string>
+    <string name="show">HIỆN</string>
+    <string name="enable">BẬT</string>
+    <string name="disable">TẮT</string>
+    <string name="version">Phiên bản</string>
+</resources>
